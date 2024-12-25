@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Devam etmek için lütfen giriş yapın</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .left {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+
+        }
+        .right {
+            flex: 1;
+            max-width: 420px;
+            padding: 190px;
+        }
+        .textbox {
+            width: 370px;
+            height: 30px;
+            border: 1px solid #E0E0E0;
+        }
+        .alt-1 {
+            display: inline-block;
+            color: #B3B3B3;
+            font-family: sans-serif;
+            font-size: 15px;
+        }
+        .alt-2 {
+            display: inline-block;
+            margin-left: 37%;
+        }
+        .btn {
+           width: 380px;
+            height: 35px;
+            background-color: #3399FF;
+            border: none;
+            color: white;
+        }
+        h1 {
+            font-family: Calibri;
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+        a {
+            text-decoration: underline;
+            color: grey;
+            font-family: Calibri;
+        }
+        .text {
+            color: #595959;
+            font-family: "Microsoft PhagsPa";
+            font-size: 14.5px;
+        }
+        img {
+            width: 100%;
+            max-width: 550px;
+            height: auto;
+            margin-left: 350px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="https://sso.altinbas.edu.tr/asset/source/image/logoin.jpg" alt="Logo">
+        </div>
+
+        <div class="right">
+            <h1>Devam etmek için lütfen giriş yapın</h1>
+            <form action="{{ url_for('/welcome') }}" method="post">
+                <p><input type="text" name="email" class="textbox" placeholder="E-posta Adresiniz"></p>
+                <p><input type="password" name="password" class="textbox" placeholder="E-posta Şifreniz"></p>
+                <p class="alt-1"><input type="checkbox"> Beni hatırla</p>
+                <p class="alt-2"><a href="#">Şifremi unuttum</a></p>
+
+                <p><input class="btn" type="submit" value="Giriş"></p>
+            </form>
+            <p class="text">Devam etmek için lütfen okulunuz tarafından verilen (edu.tr<br> ile biten) e-posta adresinizi
+            ve  şifrenizi giriniz. E-posta şifresi<br> kullanım  süresi 2 ( iki ) aydır.
+            Şifreniz  ile giriş  yapamamanız<br> durumunda "Şifremi Unuttum" bağlantısını kullanarak şifren-<br>izi sıfırlayabilir
+            ve tekrar giriş yapmayı deneyebilirsiniz.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

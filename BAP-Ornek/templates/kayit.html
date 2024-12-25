@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Altınbaş Üniversitesine Hoş Geldiniz!</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .left {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+
+        }
+        .right {
+            flex: 1;
+            max-width: 420px;
+            padding: 190px;
+        }
+        .textbox {
+            width: 370px;
+            height: 30px;
+            border: 1px solid #E0E0E0;
+        }
+        .alt-1 {
+            display: inline-block;
+            color: #B3B3B3;
+            font-family: sans-serif;
+            font-size: 15px;
+        }
+        .alt-2 {
+            display: inline-block;
+            margin-left: 37%;
+        }
+        .btn {
+           width: 380px;
+            height: 35px;
+            background-color: #3399FF;
+            border: none;
+            color: white;
+        }
+        h1 {
+            font-family: Calibri;
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+        a {
+            text-decoration: underline;
+            color: grey;
+            font-family: Calibri;
+        }
+        .text {
+            color: #595959;
+            font-family: "Microsoft PhagsPa";
+            font-size: 14.5px;
+        }
+        .name_text{
+            width: 180px;
+            height: 30px;
+            display: inline-block;
+        }
+        .surname_text{
+            width: 175px;
+            height: 30px;
+            display: inline-block;
+        }
+        img {
+            width: 100%;
+            max-width: 550px;
+            height: auto;
+            margin-left: 350px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="https://sso.altinbas.edu.tr/asset/source/image/logoin.jpg" alt="Logo">
+        </div>
+
+        <div class="right">
+            <h1>Altınbaş Üniversitesine Hoş Geldiniz!</h1>
+            <form action="{{ url_for('welcome') }}" method="post">
+                <p><input type="text" name="name" class="name_text" placeholder="Adınız"> <input type="text" name="surname" class="surname_text" placeholder="Soyadınız"></p>
+                <p><input type="text" name="email" class="textbox" placeholder="E-posta Adresiniz"></p>
+                <p><input type="password" name="password" class="textbox" placeholder="Şifreniz"></p>
+                <p><input type="text" name="password_again" class="textbox" placeholder="Şifreniz(tekrar)"></p>
+
+                <p><input class="btn" type="submit" value="Kayıt Ol"></p>
+            </form>
+            <p class="text"> Sevgili öğrencimiz, keşke bu okula gelerek hayatınızın hata-<br>sını yapmasaydınız. Bu okula kayıt olarak
+                buranın eğitimden ziyade bir ticarethane olduğunu kabul etmiş sayılırsınız. Çok sevgili rektörümüzün
+                kulüplerimize ve öğrencilerimize destek olmaktan ziyade köstek olmaktadır. Yeni akademik yılda baş-<br>arılar dileriz.
+            </p>
+            <p>{{ hata }}</p>
+        </div>
+    </div>
+</body>
+</html>
