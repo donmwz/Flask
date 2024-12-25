@@ -1,1 +1,2 @@
 # Flask
+Uygulamanıngenel genel amacı kullanıcının kayıt ekranı vasıtasıyla kayıt olması ve kayıt olurken kullandığı eposta adresine smtp sunucuları ile doğrulama kodu göndermek. Eğer gönderilen doğrulama kodu ile kullanıcının girdiği kod eşleşiyor ise kullanıcının bilgileri Postgre SQL kaydedilecek ve kullanıcı giriş ekrarnına yönlendirilecek. Kullanıcının giriş yaparken kullandığı bilgiler mevcut database den sorgulanacak ve giriş sağlanacak.
